@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plan Your Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#800000", /* Deep Maroon */
+            "secondary-accent": "#C0A062", /* Muted Gold */
+            "background-light": "#FFFFFF", /* Pure White */
+            "background-dark": "#1A1A1A", /* Off-Black for dark mode */
+            "text-light": "#333333", /* Dark Gray */
+            "text-dark": "#E0E0E0", /* Light Gray for dark mode */
+            "card-light": "#FFFFFF",
+            "card-dark": "#2C2C2C",
+            "border-light": "#F0F0F0",
+            "border-dark": "#3D3D3D",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom styles for the slider thumb */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1rem; /* 16px */
+      height: 1rem; /* 16px */
+      background-color: #800000; /* primary color */
+      border-radius: 9999px; /* full */
+      cursor: pointer;
+      margin-top: -6px; /* Adjust to center thumb on the track */
+    }
+
+    input[type=range]::-moz-range-thumb {
+      width: 1rem;
+      height: 1rem;
+      background-color: #800000;
+      border-radius: 9999px;
+      cursor: pointer;
+      border: none;
+    }
+    .dark input[type=range]::-webkit-slider-thumb {
+      background-color: #C0A062;
+    }
+    .dark input[type=range]::-moz-range-thumb {
+       background-color: #C0A062;
+    }
+
+    /* Custom styles for the slider track */
+    input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 4px; /* Track height */
+        background: transparent; /* Make track transparent */
+        outline: none;
+        border-radius: 2px;
+    }
+    /* Style for the range slider track progress */
+    .slider-progress {
+        background: linear-gradient(to right, #C0A062 var(--progress-width, 0%), #F0F0F0 var(--progress-width, 0%));
+    }
+    .dark .slider-progress {
+        background: linear-gradient(to right, #C0A062 var(--progress-width, 0%), #3D3D3D var(--progress-width, 0%));
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 pt-4">
+<div class="flex items-center pb-2">
+<h1 class="text-xl font-bold flex-1">Plan Your Journey</h1>
+</div>
+</header>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-1 px-4 py-2 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-[60px] z-10">
+<div class="flex justify-between">
+<p class="text-sm font-medium leading-normal">Step 1 of 3</p>
+</div>
+<div class="rounded-full bg-border-light dark:bg-border-dark h-1.5 w-full">
+<div class="h-full rounded-full bg-primary" style="width: 33%;"></div>
+</div>
+</div>
+<main class="flex flex-col flex-1 p-4 space-y-4">
+<!-- Tour Type Card -->
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none border border-border-light dark:border-border-dark p-4">
+<p class="text-base font-semibold mb-3">Tour Type</p>
+<div class="flex h-12 flex-1 items-center justify-center rounded-lg bg-border-light dark:bg-border-dark p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:text-primary dark:has-[:checked]:text-secondary-accent has-[:checked]:shadow-sm has-[:checked]:ring-2 has-[:checked]:ring-primary dark:has-[:checked]:ring-secondary-accent">
+<span class="truncate">In-City</span>
+<input checked="" class="invisible w-0" name="tour_type" type="radio" value="In-City"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:text-primary dark:has-[:checked]:text-secondary-accent has-[:checked]:shadow-sm has-[:checked]:ring-2 has-[:checked]:ring-primary dark:has-[:checked]:ring-secondary-accent">
+<span class="truncate">Out-of-City</span>
+<input class="invisible w-0" name="tour_type" type="radio" value="Out-of-City"/>
+</label>
+</div>
+</div>
+<!-- Trip Duration Card -->
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none border border-border-light dark:border-border-dark p-4">
+<div class="flex w-full items-center justify-between mb-3">
+<p class="text-base font-semibold">Trip Duration</p>
+<p class="text-sm font-medium text-secondary-accent">7 Days</p>
+</div>
+<div class="flex h-4 w-full items-center gap-4">
+<input class="slider-progress w-full h-1 bg-border-light dark:bg-border-dark rounded-full appearance-none" max="14" min="1" style="--progress-width: 50%;" type="range" value="7"/>
+</div>
+</div>
+<!-- Budget Range Card -->
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none border border-border-light dark:border-border-dark p-4">
+<div class="flex w-full items-center justify-between mb-3">
+<p class="text-base font-semibold">Budget Range</p>
+<p class="text-sm font-medium text-secondary-accent">Standard</p>
+</div>
+<div class="relative pt-2">
+<input class="slider-progress w-full h-1 bg-border-light dark:bg-border-dark rounded-full appearance-none" max="3" min="1" style="--progress-width: 50%;" type="range" value="2"/>
+<div class="flex justify-between mt-2 text-xs text-text-light/70 dark:text-text-dark/70">
+<span>Economy</span>
+<span>Standard</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+<!-- Group Type Card -->
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none border border-border-light dark:border-border-dark p-4">
+<p class="text-base font-semibold mb-3">Group Type</p>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-border-light dark:border-border-dark p-4 has-[:checked]:border-primary dark:has-[:checked]:border-secondary-accent has-[:checked]:bg-primary/5 dark:has-[:checked]:bg-secondary-accent/10">
+<span class="material-symbols-outlined text-3xl">family_restroom</span>
+<span class="text-sm font-medium">Family</span>
+<input checked="" class="invisible w-0" name="group_type" type="radio" value="family"/>
+</label>
+<label class="flex flex-col cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-border-light dark:border-border-dark p-4 has-[:checked]:border-primary dark:has-[:checked]:border-secondary-accent has-[:checked]:bg-primary/5 dark:has-[:checked]:bg-secondary-accent/10">
+<span class="material-symbols-outlined text-3xl">boy</span>
+<span class="text-sm font-medium">Bachelor</span>
+<input class="invisible w-0" name="group_type" type="radio" value="bachelor"/>
+</label>
+</div>
+</div>
+</main>
+<!-- Sticky Footer Button -->
+<footer class="sticky bottom-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+<button class="w-full bg-primary text-white dark:text-background-dark dark:bg-secondary-accent font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/20 dark:shadow-secondary-accent/20 hover:bg-primary/90 dark:hover:bg-secondary-accent/90 transition-colors">
+        Generate Personalized Itinerary
+      </button>
+</footer>
+</div>
+</body></html>

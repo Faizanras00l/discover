@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lahore Tourist App</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f0d342",
+              "background-light": "#f8f8f6",
+              "background-dark": "#221f10",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-screen w-full max-w-md flex-col overflow-hidden bg-white dark:bg-gray-900">
+<!-- Top App Bar -->
+<div class="absolute top-0 z-10 w-full bg-white dark:bg-gray-900/80 dark:backdrop-blur-sm">
+<div class="flex items-center p-4">
+<div class="flex flex-1 items-stretch rounded-full">
+<div class="flex items-center justify-center rounded-l-full bg-gray-100 pl-4 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full border-none bg-gray-100 px-4 py-3 text-gray-900 placeholder:text-gray-500 focus:outline-0 focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400" placeholder="Search for places..." value=""/>
+</div>
+<button class="ml-2 flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Main Content: Map -->
+<div class="relative h-full flex-1">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A clean, minimalist map view of Lahore's streets and districts." data-location="Lahore" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCY8SYbPAjCrOhgD_0QIQV_z734obFbZ4qjN14IKKIiTSCcJZoEdkCPVKwxtjvG8DODuxYLpjZWPoUm3oQbMswVIGZOlfKIukO-KRNptmdNJrLrwyO9ZbNh3VI1t0chHxq6tfaD5VbTBFc4xUSTItsg7PYgP0OSh4WqvEWVVUPIXxTZ9ZVGJLAmsxPEwB3ReIuuf7icfrVidN7c0f5hRDOC2_t1WZXwWG4QugQtBmL6W3R9iOID4EX8J8Xav6VPXEa8Qv-70F3-gdtu');">
+<!-- Safe Zone Overlay -->
+<div class="absolute left-1/4 top-1/4 h-1/2 w-1/2 rounded-xl border-2 border-[#C5B358] bg-[#C5B358]/30 backdrop-blur-sm">
+<div class="flex h-full w-full items-center justify-center">
+<span class="font-bold text-white text-shadow-lg">Safe Zone</span>
+</div>
+</div>
+<!-- Map Pins -->
+<!-- Attraction Pin -->
+<div class="absolute" style="top: 30%; left: 65%;">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFA726] shadow-lg">
+<span class="material-symbols-outlined text-white text-lg">museum</span>
+</div>
+</div>
+<!-- Food Pin -->
+<div class="absolute" style="top: 55%; left: 40%;">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#66BB6A] shadow-lg">
+<span class="material-symbols-outlined text-white text-lg">restaurant</span>
+</div>
+</div>
+<!-- Hotel Pin -->
+<div class="absolute" style="top: 60%; left: 70%;">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#42A5F5] shadow-lg">
+<span class="material-symbols-outlined text-white text-lg">hotel</span>
+</div>
+</div>
+<!-- Photo Spot Pin -->
+<div class="absolute" style="top: 40%; left: 20%;">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#AB47BC] shadow-lg">
+<span class="material-symbols-outlined text-white text-lg">photo_camera</span>
+</div>
+</div>
+<!-- Attraction Pin 2 -->
+<div class="absolute" style="top: 75%; left: 25%;">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFA726] shadow-lg">
+<span class="material-symbols-outlined text-white text-lg">fort</span>
+</div>
+</div>
+</div>
+<!-- Emergency SOS Button -->
+<div class="absolute bottom-28 right-4 z-20">
+<button class="flex h-16 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[#B71C1C] text-white shadow-xl">
+<span class="text-xs font-bold uppercase tracking-wider">SOS</span>
+</button>
+</div>
+<!-- Real-time data panel -->
+<div class="absolute bottom-0 z-10 w-full p-4 pb-24">
+<div class="flex w-full gap-4 rounded-xl bg-white/80 p-4 shadow-lg backdrop-blur-md dark:bg-gray-900/80">
+<div class="flex flex-1 flex-col gap-1 rounded-lg bg-white/50 p-3 dark:bg-gray-800/50">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Air Quality</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">AQI: 150</p>
+</div>
+<div class="flex flex-1 flex-col gap-1 rounded-lg bg-white/50 p-3 dark:bg-gray-800/50">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Crowd Update</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">Moderate</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="absolute bottom-0 z-20 w-full">
+<div class="flex border-t border-gray-200 bg-white px-4 pb-3 pt-2 dark:border-gray-700 dark:bg-gray-900">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-900 dark:text-white" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+</div>
+<p class="text-xs font-bold">Map</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">list_alt</span>
+</div>
+<p class="text-xs font-medium">Itinerary</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<p class="text-xs font-medium">Discover</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

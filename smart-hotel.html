@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Select Your Hotel</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800000", // Deep Maroon
+                        "secondary": "#D4AF37", // Muted Gold
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#121212",
+                        "text-primary-light": "#212121",
+                        "text-primary-dark": "#F5F5F5",
+                        "text-secondary-light": "#757575",
+                        "text-secondary-dark": "#BDBDBD",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "chip-light": "#F5F5F5",
+                        "chip-dark": "#2C2C2C",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", // 8px
+                        "lg": "0.75rem", // 12px
+                        "xl": "1rem", // 16px
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex flex-col gap-2 bg-background-light dark:bg-background-dark px-4 pt-4 pb-2 shadow-sm shadow-gray-200/50 dark:shadow-black/20">
+<div class="flex h-12 items-center justify-between">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark text-3xl">arrow_back</span>
+</div>
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark text-3xl">account_circle</span>
+</div>
+</div>
+<h1 class="text-text-primary-light dark:text-text-primary-dark text-3xl font-bold tracking-tight">Select Your Hotel</h1>
+</header>
+<!-- Chips -->
+<div class="flex flex-wrap gap-3 p-4">
+<button class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-chip-light dark:bg-chip-dark px-4">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium">Price</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-chip-light dark:bg-chip-dark px-4">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium">Rating</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-chip-light dark:bg-chip-dark px-4">
+<p class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium">Group Type</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">expand_more</span>
+</button>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4">
+<p class="text-primary text-sm font-semibold">Family Mode Active</p>
+</div>
+</div>
+<!-- Hotel Cards List -->
+<main class="flex flex-col gap-6 px-4 pb-8">
+<!-- Card 1 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light dark:bg-card-dark shadow-lg shadow-gray-500/10 dark:shadow-black/20 overflow-hidden">
+<div class="w-full bg-cover bg-center aspect-[16/10]" data-alt="Modern hotel exterior with a large swimming pool under a sunny sky." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNI-m7lJz55qKzV7qk8RZEGusIccxFVDG9X_cHsl40Nztu69lRqnLzLeNfpv3nwo6a_J3RaEIOW9FcuD2ZaN7wVPWdWCLk5XzqlRs7JNU4ULH6AME9xkPJoeFzXaC0BgsVU4f7oZSrUeBA9jl9EH2UuFpiqM1oRS69tVoJSJE8_54G02aw7DiGzzQQk46K2Naq6kMi5U1rQv5dw-MMha5S_bA1B9qPozy2J6tBzDyUjxYf0cIPBChaGjcNDcLRdh3TPYdBkY2LkcJA");'></div>
+<div class="flex w-full flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex flex-col gap-1.5">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight">Grand Palace Hotel</h2>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary">star_half</span>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium ml-1">4.7</p>
+</div>
+<div class="mt-1 flex items-center gap-2 rounded-full bg-primary/10 dark:bg-primary/20 px-3 py-1.5 self-start">
+<span class="material-symbols-outlined text-primary text-base">family_restroom</span>
+<p class="text-primary text-sm font-semibold">Safety Certified &amp; Play Area</p>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light dark:bg-card-dark shadow-lg shadow-gray-500/10 dark:shadow-black/20 overflow-hidden">
+<div class="w-full bg-cover bg-center aspect-[16/10]" data-alt="City hotel lobby with elegant seating and large windows." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhozev96oZnlX7SsLvwMu98WOf2PmXoCNzP7uf7X9yGiatBLAWog5D_GQgURAzhXru1qgek7Tc9-QO6wCaruz2Tzj5YMfAXUGzFxL1xnzWftpchetPP4zM52i3y0mYm8pkPylxJWXwh-Izvr3FV4kW6LIWV1otAwaZ70q3r-OPEiJedJXIJRvzGHux-caQZx7wL_yjGDHb9LgkgsnV6-49zBFNi7f4QbZR1MP08a6PbZng1LtTF9QFWBinEfX-8OhzKTwIh7XqGS_G");'></div>
+<div class="flex w-full flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex flex-col gap-1.5">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight">City Center Inn</h2>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary">star</span>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium ml-1">4.5</p>
+</div>
+<div class="mt-1 flex items-center gap-2 rounded-full bg-secondary/20 dark:bg-secondary/30 px-3 py-1.5 self-start">
+<span class="material-symbols-outlined text-secondary text-base">nightlife</span>
+<p class="text-secondary text-sm font-semibold">Close to Nightlife &amp; Social Zone</p>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card-light dark:bg-card-dark shadow-lg shadow-gray-500/10 dark:shadow-black/20 overflow-hidden">
+<div class="w-full bg-cover bg-center aspect-[16/10]" data-alt="A tranquil resort by a lake with mountains in the background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_29pEwhaX9lT_90t7M_8u0JdCmuXMhpPEihwGWajdRdOTQYY6boJfJO6CoTr_2aZzUy9TVTpq58_f4_OovgbIr-6ghgMOYWUm8kai7vxWxGwU4nuL7e9DilLf7q44Yq4mhdFy9eRpE6NEvhLMZrTa5TDyFseNj0-iTp0MWB6Wxqn3H_zZljoQ1bUTbNchug_XQbDcvuLPSCeoQAEe9nN61UqM74Mrymfs9bMYG-CVajU4THxjcI3TeCyeeCPUqlJyrPPLmwcHNQeZ");'></div>
+<div class="flex w-full flex-col items-stretch justify-center gap-4 p-4">
+<div class="flex flex-col gap-1.5">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight">Lakeside Resort</h2>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<span class="material-symbols-outlined !text-xl !font-normal text-secondary" style="font-variation-settings: 'FILL' 1, 'wght' 700;">star</span>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium ml-1">4.8</p>
+</div>
+<div class="mt-1 flex items-center gap-2 rounded-full bg-primary/10 dark:bg-primary/20 px-3 py-1.5 self-start">
+<span class="material-symbols-outlined text-primary text-base">family_restroom</span>
+<p class="text-primary text-sm font-semibold">Safety Certified &amp; Play Area</p>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

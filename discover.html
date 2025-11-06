@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover Lahore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d41111",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FFFFFF] dark:bg-[#221010] font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-[#FFFFFF] dark:bg-[#221010]/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<h1 class="text-[#212121] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Discover Lahore</h1>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Segmented Buttons / Toggle Switch -->
+<div class="flex px-4 py-3">
+<div class="flex h-12 flex-1 items-center justify-center rounded-lg bg-[#F5F5F5] dark:bg-black/20 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-[#C5B358] has-[:checked]:shadow-sm has-[:checked]:text-[#212121] text-[#616161] dark:text-gray-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Foreign Tourist</span>
+<input checked="" class="invisible w-0" name="tourist-mode" type="radio" value="Foreign Tourist"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-[#C5B358] has-[:checked]:shadow-sm has-[:checked]:text-[#212121] text-[#616161] dark:text-gray-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Local Tourist</span>
+<input class="invisible w-0" name="tourist-mode" type="radio" value="Local Tourist"/>
+</label>
+</div>
+</div>
+<!-- Chips / Filter Bar -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#800000] px-4">
+<p class="text-white text-sm font-medium leading-normal">All</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">Food</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">Culture</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">History</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">Nature</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">Photo Spots</p>
+</div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-lg bg-[#F5F5F5] dark:bg-black/20 px-4">
+<p class="text-[#212121] dark:text-white text-sm font-medium leading-normal">Shopping</p>
+</div>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="The grand entrance of Shalimar Gardens with lush greenery and fountains" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDghSuwJsamVD_z9eGQ5QDyntvb2SVQO9ry0IKf-G-nDq9lDkfAwleZYMJcM8Jb-6yiA4XDorOnKfJwEj5qSBAX9kst7xcrT9lwqLOkx-yN06j8ULIxsTNKfI7H5-RGpWnApYaMi5I6YRsC1fNemQanO8K_L7qqgR-KTVaEjJQ88lpnpFCVYRDkUkd2-JkO34pL1-DCo6c5Zg1EK_FzDAJrVldVregvKKWflyH56IvNl687k7jvDVcY1r_lmaRGEGwowcwiGsQ4sXmh");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Shalimar Gardens</h3>
+<p class="text-[#C5B358] text-xs font-semibold">$10 Entry Fee</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Closes 6 PM</p>
+</div>
+</div>
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="The majestic Badshahi Mosque with its large domes and minarets at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB17cF_m56PEYZPE7izxqotNt2BC9fpG0X7F9S2xnda0fElmbvGtxVDRvgyxoMK8dE4wEepgNwCqwcuYrM48wb2kmoNlNlL62xY9kahJ0VmdiwXNAvXPOXWp1Rv9hikkNbjh_qmY2d9ZxfSI0kzxJMGWG9xYhM6FAFbX3UOLoFuz_xKDkUwP_HpGWKmnpdL3rHUdwpjVRV4JV_NpFrgDVQbrniK5Bpx9pzfI_3p5MCIMNGRjhTIAyl_CSJkFGfdfmeptpr_KDrjmV9r");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Badshahi Mosque</h3>
+<p class="text-[#C5B358] text-xs font-semibold">$5 Entry Fee</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Open Now</p>
+</div>
+</div>
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="An interior shot of the intricately decorated Wazir Khan Mosque" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBL7T1vxBO8YrivlDelIgzmDitdN71Olb8d3U4qwG4Sfs1_YegBRpSCHPNx3N9DF1OllJZ6ahsg3DR4-a_EHxVCcJIWVULx70v0USxlLIdQ5epEKuLzthwbaTGQ1CNHEk7mEZlg5OYTTgJr-ik221xWRGJIY5I2D1tNnT4Y1Ea5g0did9Hxl2HzuLljh0_j8u8aYwfi5oSSIT9TQ9IIhAK4vW-1zCJsnE3fgzrBk1DJcKSKU8kHlxblgnng_mg03mAuPoAleeZylKmk");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Wazir Khan Mosque</h3>
+<p class="text-[#C5B358] text-xs font-semibold">Free Entry</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Open 24 Hours</p>
+</div>
+</div>
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="The iconic Minar-e-Pakistan tower standing tall against a clear blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDs9ZzGI4vlHMyUlA0KC-nvkubXCvLIuFnGFr0zDV-e5rMdhkttxMLfvEO6Td1D4BHbw12e3AstlYxbbF_OJM4fUR9YxYKzgokaD6lwcK0YiwfjPu5DLyfoboke4dR-wEjdnuXtGbNqHxE3V_dRPPaldJq_8jvK6R9u_RoR4Re5LRyaxNi_q-JlM1Xj7zVmFQB2muzys1QcNomx73irJlBVQmwHb-Tu7zlkfFkeMdl-S9OjId4tQ-JdFmmglAQkIFDjFVeB9YcSsW6m");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Minar-e-Pakistan</h3>
+<p class="text-[#C5B358] text-xs font-semibold">$2 Entry Fee</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Closes 8 PM</p>
+</div>
+</div>
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="The historic Lahore Fort's Alamgiri Gate" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8VKkHZ4nu-Xhd38RQOfnuDTr1LnHpQ0GWteTqDpSLGQ3sr0gh-ss5DnfYdAlp8hrx-sto-LG4xLKEgLIWTYkyYcUrinzAn-_rfolPqWTKzGaauhn7v3acp3aHVFFlYVCrY2ITa8m7DgrZ1nYVPO63v1QFb2C1eyGQhcHw8ihcMtnnWGimCVWiNWWSy2rOBUOBMUFdiz9B0qcwg0nmnwi1pZW8AA0jsYusIDHiS_QLFzWPtSB2Y22WUKFAOnOW3WG4a0tSeyUNaHsI");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Lahore Fort</h3>
+<p class="text-[#C5B358] text-xs font-semibold">$8 Entry Fee</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Closes 5 PM</p>
+</div>
+</div>
+<div class="flex flex-col rounded-lg bg-[#FFFFFF] dark:bg-black/20 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)] overflow-hidden">
+<div class="bg-cover bg-center flex aspect-[3/4] w-full" data-alt="A bustling night view of Food Street in Lahore with vibrant lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAM9xKidsN2491yy7BEFkloXVh1V79jETE9-VXhopykbO7TTeRKd33KDwW8fbtJCjoBgL3Yk_ipY6c555Z65EBL_bN9VQmYZ55engEjKw-KcCJ6dcsteTTZAcWJU0Ow11tRh5bztW40PcnLCbB_BCT6-KxDm2Dmb2Wg-ZPLL41D59W_rpNohdCdRF2AMbLsR1-G7ZyTi-PlxlxTE2zP2attGQgYRvXu11Ar2J5tcylTfcSWAkBzfRi-s5Vo_35876MNtzqiCUhIdilv");'></div>
+<div class="flex flex-col gap-1 p-3">
+<h3 class="text-[#212121] dark:text-white text-sm font-bold leading-tight">Food Street</h3>
+<p class="text-[#C5B358] text-xs font-semibold">Prices Vary</p>
+<p class="text-[#800000] dark:text-[#ff8f8f] text-xs font-medium">Open Late</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="sticky bottom-0 z-10 bg-[#FFFFFF]/80 dark:bg-[#221010]/80 backdrop-blur-sm border-t border-gray-200 dark:border-white/10">
+<div class="flex gap-2 px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#800000] dark:text-[#C5B358]" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Discover</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">map</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Map</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">work</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Trips</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>
