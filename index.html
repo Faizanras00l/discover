@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lahore Tourism App Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#800000",
+        "background-light": "#F5F5F5",
+        "background-dark": "#1A1A1A",
+        "content-light": "#FFFFFF",
+        "content-dark": "#2C2C2C",
+        "text-heading": "#333333",
+        "text-tagline": "#888888",
+        "text-dark-heading": "#E0E0E0",
+        "text-dark-tagline": "#A0A0A0",
+        "accent-gold": "#D4AF37",
+        "accent-blue": "#ADD8E6",
+      },
+      fontFamily: {
+        "display": ["Plus Jakarta Sans", "sans-serif"]
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+    },
+  },
+}
+</script>
+
+<style>
+body {
+  min-height: max(884px, 100dvh);
+}
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-hidden">
+
+<main class="flex flex-1 flex-col justify-center items-center py-4 px-2 sm:px-4">
+<div class="flex flex-col w-full max-w-md h-[calc(100vh-2rem)] sm:h-auto sm:max-h-[850px] bg-content-light dark:bg-content-dark shadow-sm rounded-xl overflow-hidden">
+
+<!-- Top 60%: Illustration -->
+<div class="flex-[3_3_0%] flex items-center justify-center relative p-6">
+<div class="w-full h-full">
+<div class="relative flex items-center justify-center w-full h-full">
+<img class="h-full w-auto object-contain max-h-[450px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmwWDFD3MAO-XMFI08C2Emlj_CCVflbuW_wPF4bwBJHCNqAKRHJZOGPfx7n_Ra7SGolmHaE9kw0s6Co5MDuEbAF7PVkCERo5Ve9UU_juaZ40-MsM4fAjtnzGhxt31eZ48PfAUSIFQS6rxEGbz84AGh_Uxehf1yPitzZxDNqQz834nh4nU1m25YyoMmSnmMEqHKuQXa9ArwHsg7eLFz19ToFPvEmGfDnfN30aCvLZPzqi2V2l-I0Je3Z2B9tsLpR4ISqZnhdM2X2rF9"/>
+</div>
+</div>
+</div>
+
+<!-- Bottom Content -->
+<div class="flex-[2_2_0%] bg-content-light dark:bg-content-dark flex flex-col justify-end p-6 pt-4 text-center">
+<h1 class="text-text-heading dark:text-text-dark-heading tracking-tight text-[28px] sm:text-[32px] font-bold leading-tight">Your Smart Companion.<br>Explore Lahore.<br>Live the Culture.</h1>
+
+<p class="text-text-tagline dark:text-text-dark-tagline text-base font-normal leading-normal pt-3 pb-8">Personalized journeys, real-time guidance, unforgettable memories.</p>
+
+<div class="flex w-full">
+    <a href="main.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-primary text-white text-lg font-bold leading-normal tracking-[0.015em] hover:border-2 hover:border-accent-gold focus:border-2 focus:border-accent-gold transition-all duration-200">
+        <span class="truncate">Get Started</span>
+    </a>
+</div>
+
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>
